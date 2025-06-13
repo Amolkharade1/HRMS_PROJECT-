@@ -1,5 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
+import axios from "./axios"; // yeh tu likhega
+
 const cors = require('cors');
 const dotenv = require('dotenv');
 const path = require('path');
