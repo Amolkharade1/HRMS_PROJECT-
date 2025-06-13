@@ -17,6 +17,10 @@ const employeeFileRoutes = require('./routes/employeefileRoutes'); // ✅ New Em
 const HRAddressProofRoutes = require('./routes/HRAddressProofRoutes');
 const bonafideRoutes = require('./routes/BonafideRoutes'); // ✅ Bonafide route import
 const experienceLetterRoutes = require('./routes/ExperienceLetterRoutes'); // ✅ NEW
+app.get("/", (req, res) => {
+  res.send("✅ HRMS Backend is live and working!");
+});
+
 
 
 require('dotenv').config();
