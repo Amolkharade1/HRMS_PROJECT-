@@ -1,0 +1,204 @@
+.aed-container {
+  font-family: "Segoe UI", sans-serif;
+  background: #f4f6f9;
+  padding: 20px;
+  position: relative;
+  min-height: 80vh;
+  padding-bottom: 80px;
+  overflow-y: auto;
+  height: calc(100vh - 40px);
+}
+
+.aed-header h2 {
+  margin: 10px 0 20px;
+  font-size: 20px;
+  font-weight: 500;
+  color: #333;
+}
+
+.aed-form-box {
+  background: #fff;
+  border-radius: 6px;
+  padding: 20px;
+  border: 1px solid #e0e0e0;
+  max-height: calc(200vh - 200px);
+  overflow-y: auto;
+  margin-bottom: 4rem;
+}
+
+.aed-section-title {
+  font-size: 16px;
+  margin-bottom: 20px;
+  font-weight: 500;
+  color: #333;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+.aed-form-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  gap: 20px;
+}
+
+.aed-form-group {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 300px;
+}
+
+.aed-form-group label {
+  font-size: 14px;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+.aed-input-field {
+  padding: 8px 12px;
+  border: 1px solid #dcdcdc;
+  border-radius: 4px;
+  font-size: 14px;
+  height: 36px;
+  width: 550px !important;
+  box-sizing: border-box;
+}
+
+.aed-input-field[type="textarea"] {
+  height: auto;
+  min-height: 80px;
+}
+
+textarea.aed-input-field {
+  height: auto;
+  min-height: 80px;
+  width: 300px;
+}
+
+.aed-required {
+  color: red;
+  margin-left: 2px;
+}
+
+.aed-form-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.aed-form-actions.aed-sticky-footer {
+  position: fixed;
+  bottom: 0;
+  left: 157px;
+  right: 0;
+  background: #fff;
+  padding: 15px 20px;
+  border-top: 1px solid #e0e0e0;
+  z-index: 100;
+  margin-top: 20px;
+}
+
+.aed-btn {
+  padding: 8px 16px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  min-width: 120px;
+  text-align: center;
+}
+
+.aed-btn.aed-blue {
+  background-color: #007bff;
+  color: white;
+}
+
+.aed-btn.aed-blue:hover {
+  background-color: #0069d9;
+}
+
+.aed-btn.aed-blue:disabled {
+  background-color: #b3d7ff;
+  cursor: not-allowed;
+}
+
+.aed-btn.aed-gray {
+  background-color: #f1f1f1;
+  color: #333;
+}
+
+.aed-btn.aed-gray:hover {
+  background-color: #e0e0e0;
+}
+
+.aed-btn.aed-gray:disabled {
+  background-color: #f1f1f1;
+  cursor: not-allowed;
+}
+
+.aed-error-message {
+  color: #d32f2f;
+  background-color: #fde8e8;
+  padding: 10px 15px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  border: 1px solid #f5c6cb;
+}
+
+.aed-loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 18px;
+  color: #333;
+}
+
+@media (max-width: 768px) {
+  .aed-form-row {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .aed-form-group {
+    min-width: 100%;
+  }
+  
+  .aed-input-field,
+  textarea.aed-input-field {
+    width: 100%;
+  }
+  
+  .aed-form-actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .aed-btn {
+    width: 100%;
+  }
+  
+  .aed-container {
+    padding: 15px;
+    padding-bottom: 180px;
+  }
+}
+
+@media (max-width: 480px) {
+  .aed-header h2 {
+    font-size: 18px;
+  }
+  
+  .aed-section-title {
+    font-size: 15px;
+  }
+  
+  .aed-input-field {
+    font-size: 13px;
+  }
+  
+  .aed-form-actions.aed-sticky-footer {
+    padding: 10px 15px;
+  }
+}

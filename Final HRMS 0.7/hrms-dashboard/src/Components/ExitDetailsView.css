@@ -1,0 +1,264 @@
+/* Exit Details View Styles */
+.exitview-container {
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Table controls */
+.exitview-table-controls {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+/* Search bar styles */
+.exitview-search-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.exitview-search-icon {
+  position: absolute;
+  left: 10px;
+  color: #7f8c8d;
+}
+
+.exitview-search-input {
+  padding: 8px 12px 8px 35px;
+  border: 1px solid #ddd;
+  border-radius: 0;
+  font-size: 14px;
+  width: 250px;
+  transition: border-color 0.3s;
+}
+
+.exitview-search-input:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+}
+
+/* Add record button */
+.exitview-add-record-btn {
+  padding: 8px 16px;
+  background-color: #1a73e8;
+  color: white;
+  border: none;
+  border-radius: 0;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background-color 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.exitview-add-record-btn:hover {
+  background-color: #0d5bba;
+}
+
+/* Table container */
+.exitview-table-scroll-container {
+  width: 100%;
+  overflow-x: auto;
+  border-radius: 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  background-color: white;
+}
+
+.exitview-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: max-content;
+  table-layout: fixed;
+}
+
+.exitview-table-header {
+  background-color: #E5E4E2;
+  color: #4b5b6d;
+  opacity: 0.9;
+  font-size: 14px;
+  font-weight: 500;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.exitview-header-cell {
+  padding: 12px 8px;
+  text-align: left;
+   background-color: #E5E4E2;
+  color: #4b5b6d;
+  opacity: 0.9;
+  font-size: 14px;
+  font-weight: 500;
+  /* font-weight: 600;
+  color: #495057; */
+  border-bottom: 1px solid #dee2e6;
+  border-right: 1px solid #e0e0e0;
+  position: relative;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  /* background-color: #e9ecef; */
+}
+
+.exitview-header-cell:last-child {
+  border-right: none;
+}
+
+.exitview-header-content {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  width: 100%;
+}
+
+.exitview-header-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: inline-block;
+  max-width: 100%;
+}
+
+.exitview-header-cell:hover {
+  background-color: #e9ecef;
+}
+
+.exitview-sort-icon {
+  font-size: 12px;
+  flex-shrink: 0;
+}
+
+.exitview-table-body {
+  background-color: white;
+}
+
+.exitview-table-row {
+  border-bottom: 1px solid #dee2e6;
+  transition: background-color 0.2s;
+}
+
+.exitview-table-row:last-child {
+  border-bottom: none;
+}
+
+.exitview-table-row:hover {
+  background-color: #f8f9fa;
+}
+
+.exitview-table-cell {
+  padding: 12px 8px;
+  font-size: 14px;
+  color: #495057;
+  vertical-align: top;
+  border-right: 1px solid #e0e0e0;
+  word-break: break-word;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.exitview-table-cell:last-child {
+  border-right: none;
+}
+
+.exitview-actions-cell {
+  text-align: center;
+}
+
+/* Action buttons */
+.exitview-action-buttons {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+.exitview-edit-btn, .exitview-delete-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.exitview-edit-btn:hover {
+  opacity: 1;
+  color: #ffc107;
+}
+
+.exitview-delete-btn:hover {
+  opacity: 1;
+  color: #dc3545;
+}
+
+/* No records styles */
+.exitview-no-records-row td {
+  padding: 0;
+}
+
+.exitview-no-records {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  color: #6c757d;
+}
+
+.exitview-no-records-image {
+  margin-bottom: 15px;
+}
+
+.exitview-image-placeholder {
+  font-size: 48px;
+  opacity: 0.6;
+}
+
+.exitview-no-records-text {
+  font-size: 16px;
+}
+
+/* Loading and error states */
+.exitview-loading-container, .exitview-error-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  font-size: 16px;
+  color: #6c757d;
+}
+
+.exitview-error-container {
+  color: #dc3545;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .exitview-table-controls {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  
+  .exitview-search-input {
+    width: 100%;
+  }
+  
+  .exitview-add-record-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}

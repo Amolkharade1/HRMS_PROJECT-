@@ -1,0 +1,346 @@
+/* FormView.css */
+body {
+    background-color: #f8fafc;
+    margin: 0;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.form-view-wrapper {
+    max-width: 1550px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+    position: relative;
+    min-height: 100vh;
+    padding-bottom: 80px; /* Add padding to accommodate footer */
+}
+
+.form-view-container {
+    padding: 16px;
+    background-color: transparent; /* Remove container background */
+}
+
+.form-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.search-box-container {
+    flex-grow: 1;
+    margin-right: 16px;
+}
+
+.task-search-input {
+    padding: 8px 12px;
+  border: 1px solid #d0d4da;
+  border-radius: 4px;
+  font-size: 14px;
+  width: 200px;
+    margin-left: 61rem;
+}
+
+.action-buttons {
+    display: flex;
+    /* gap: 12px; */
+}
+
+.form-action-column {
+    position: relative;
+    width: 80px;
+    overflow: visible; /* Ensure dropdown can overflow the cell */
+}
+
+.form-action-icon-wrapper {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    padding: 5px;
+    margin-left: 10px;
+    /* z-index: 1; Add this to ensure dropdown stays within table cell */
+}
+
+.form-action-icon {
+    font-size: 16px;
+    color: #666;
+    transition: color 0.2s;
+}
+
+.form-action-icon-wrapper:hover .form-action-icon {
+    color: #333;
+}
+
+.form-dropdown-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    z-index: 20; /* Increase this value to be higher than the sticky header */
+    min-width: 160px;
+    animation: fadeIn 0.2s ease-in-out;
+    margin-top: 5px; /* Add some space between the icon and dropdown */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-4px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.form-dropdown-option {
+    padding: 10px 14px;
+    cursor: pointer;
+    font-size: 14px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.form-dropdown-option:last-child {
+    border-bottom: none;
+}
+
+.form-dropdown-option:hover {
+    background-color: #f5f5f5;
+}
+
+.form-dropdown-status {
+    padding: 8px 14px;
+    cursor: pointer;
+    font-size: 13px;
+    color: #0070f3;
+}
+
+.form-dropdown-status:hover {
+    background-color: #f0f8ff;
+}
+
+.form-priority-high {
+    color: #e74c3c;
+    font-weight: 500;
+}
+
+.form-priority-moderate {
+    color: #f39c12;
+    font-weight: 500;
+}
+
+.form-priority-low {
+    color: #2ecc71;
+    font-weight: 500;
+}
+
+.form-status-open {
+    color: #3498db;
+    font-weight: 500;
+}
+
+.form-status-in-progress {
+    color: #f39c12;
+    font-weight: 500;
+}
+
+.form-status-completed {
+    color: #2ecc71;
+    font-weight: 500;
+}
+
+.form-add-task-btn {
+    background-color: #1a73e8;
+    color: white;
+    padding: 8px 16px;
+    font-size: 14px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    
+}
+
+.form-add-task-btn:hover {
+    background-color: #2980b9;
+}
+
+.form-task-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.form-task-table th, 
+.form-task-table td {
+    padding: 12px 16px;
+    text-align: left;
+    border-bottom: 1px solid #e2e8f0;
+    border-right: 1px solid #e2e8f0;
+}
+
+.form-task-table th:last-child,
+.form-task-table td:last-child {
+    border-right: none;
+}
+
+.form-th {
+    background-color: #E5E4E2;
+  color: #4b5b6d;
+  opacity: 0.9;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.form-th-checkbox {
+    background-color: #E5E4E2;
+  color: #4b5b6d;
+  opacity: 0.9;
+  font-size: 14px;
+  font-weight: 500;
+    width: 40px;
+}
+
+.form-td-checkbox {
+    width: 40px;
+}
+
+.form-task-footer {
+    position: fixed;
+    bottom: 0;
+    left: 156px;
+    right: 0;
+    background-color: white;
+    padding: 12px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #e2e8f0;
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.05);
+}
+
+.form-total-records {
+    font-size: 14px;
+    color: #64748b;
+}
+
+.form-record-count {
+    color: #3498db;
+    font-weight: 600;
+}
+
+.form-pagination {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.form-page-size {
+    padding: 4px 5px;
+    border: 1px solid #d1d5db;
+    border-radius: 4px;
+    background-color: white;
+}
+
+.form-page-info {
+    font-size: 14px;
+    color: #334155;
+}
+
+.form-pagination-btn {
+    background-color: white;
+    border: 1px solid #d1d5db;
+    padding: 6px 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+.form-pagination-btn:hover {
+    background-color: #f1f5f9;
+}
+
+.form-table-container {
+    max-height: calc(100vh - 250px);
+    overflow-y: auto;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.form-task-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+.form-task-table thead {
+    position: sticky;
+    top: 0;
+    background-color: #f1f5f9;
+    z-index: 15; /* This should be lower than the dropdown's z-index */
+}
+
+/* Mobile responsiveness */
+@media (max-width: 1540px) {
+    .form-view-wrapper {
+        padding: 20px 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .form-view-wrapper {
+        padding: 15px 10px;
+    }
+    
+    .form-controls {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .search-box-container {
+        margin-right: 0;
+        width: 100%;
+    }
+    
+    .task-search-input {
+        width: 100%;
+        margin-left: 0;
+    }
+    
+    .action-buttons {
+        width: 100%;
+        justify-content: flex-end;
+    }
+
+    .form-task-footer {
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .form-view-wrapper {
+        padding: 10px;
+    }
+    
+    .form-task-table th, 
+    .form-task-table td {
+        padding: 8px 12px;
+        font-size: 13px;
+    }
+    
+    .form-task-footer {
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
+        padding: 8px;
+    }
+}

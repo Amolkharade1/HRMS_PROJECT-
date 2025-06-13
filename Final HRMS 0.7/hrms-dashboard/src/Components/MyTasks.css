@@ -1,0 +1,362 @@
+/* MyTasks.css */
+body {
+  margin: 0;
+  font-family: 'Lato', 'Segoe UI', sans-serif;
+  font-size: 14px;
+  background-color: #f1f3f6;
+  color: #333;
+}
+
+.my-tasks-page-wrapper-v2 {
+  max-width: 1460px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.my-tasks-container-v2 {
+  width: 100%;
+}
+
+.my-tasks-controls-wrapper-v2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  margin-bottom: 0;
+}
+
+.my-tasks-filters-wrapper-v2 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.my-tasks-actions-right-v2 {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.my-tasks-search-input-v2 {
+  padding: 8px 12px;
+  border: 1px solid #d0d4da;
+  border-radius: 4px;
+  font-size: 14px;
+  width: 200px;
+  margin-right: 0.10rem;
+}
+
+.my-tasks-filter-button-v2 {
+  background-color: #fff;
+  padding: 6px 10px;
+  border: 1px solid #cbd1d6;
+  border-radius: 4px;
+  font-size: 14px;
+  color: #333;
+  
+}
+
+.my-tasks-open-button-v2 {
+  background-color: #edf2ff;
+  color: #333;
+  font-size: 14px;
+  padding: 6px 12px;
+  border: 1px solid #c3d4fa;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.my-tasks-open-count-v2 {
+  color: #0088FF;
+}
+
+.my-tasks-completed-count-v2 {
+  color: #00b386;
+}
+
+.my-tasks-list-container-v2 {
+  max-width: 1500px;
+  margin: 0 auto;
+  background-color: white;
+  width: 95%;
+  border-radius: 4px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.05);
+  max-height: 70vh;
+  overflow-y: auto;
+}
+
+.my-tasks-list-wrapper-v2 {
+  width: 100%;
+}
+
+.my-tasks-scrollable-content {
+  max-height: calc(100vh - 50px);
+  overflow-y: auto;
+}
+
+.my-tasks-header-row-v2 {
+  display: flex;
+  padding: 10px 16px;
+  background-color: #E5E4E2;
+  color: #4b5b6d;
+  opacity: 0.9;
+  font-size: 14px;
+  font-weight: 500;
+  position: sticky;
+  top: 0;
+  /* width: 100%; */
+  z-index: 1;
+}
+
+.my-tasks-task-item-v2 {
+  display: flex;
+  align-items: center;
+  padding: 14px 16px;
+  background-color: white;
+  border-bottom: 1px solid #e0e0e0;
+  font-size: 14px;
+}
+
+.my-tasks-single-line-v2 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.my-tasks-column-v2 {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.my-tasks-column-v2.my-tasks-details-v2 {
+  flex: 3;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  min-width: 0;
+}
+
+.my-tasks-checkbox-v2 {
+  margin-top: 3px;
+  flex-shrink: 0;
+}
+
+.my-tasks-emoji-v2 {
+  font-size: 20px;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.my-tasks-column-v2.my-tasks-status-v2 {
+  width: 140px;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.my-tasks-column-v2.my-tasks-action-v2 {
+  width: 80px;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.my-tasks-text-wrapper-v2 {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  flex-grow: 1;
+}
+
+.my-tasks-title-v2 {
+  font-weight: 600;
+  font-size: 14px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.my-tasks-desc-v2 {
+  font-size: 14px;
+  color: #555;
+}
+
+.my-tasks-meta-v2 {
+  font-size: 12px;
+  color: #777;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.my-tasks-assigned-to {
+  font-size: 12px;
+}
+
+/* .my-tasks-due-date {
+  font-size: 12px;
+  font-weight: 500;
+} */
+
+.my-tasks-status-badge-v2 {
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.my-tasks-status-badge-v2.my-tasks-open-v2 {
+  background-color: #e3f2fd;
+  color: #1976d2;
+}
+
+.my-tasks-status-badge-v2.my-tasks-completed-v2 {
+  background-color: #e8f5e9;
+  color: #388e3c;
+}
+
+.my-tasks-action-icon-wrapper {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.my-tasks-action-icon {
+  font-size: 16px;
+  color: #333;
+  vertical-align: middle;
+}
+
+.my-tasks-dropdown-menu {
+  position: absolute;
+  top: 24px;
+  right: 0;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  z-index: 10;
+  min-width: 160px;
+  animation: fadeIn 0.2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.my-tasks-dropdown-option {
+  padding: 10px 14px;
+  cursor: pointer;
+  font-size: 14px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.my-tasks-dropdown-option:last-child {
+  border-bottom: none;
+}
+
+.my-tasks-dropdown-option:hover {
+  background-color: #f5f5f5;
+}
+
+.my-tasks-dropdown-status {
+  padding: 8px 14px;
+  cursor: pointer;
+  font-size: 13px;
+  color: #0070f3;
+}
+
+.my-tasks-dropdown-status:hover {
+  background-color: #f0f8ff;
+}
+
+.my-tasks-add-task-button-v2 {
+  background-color: #1a73e8;
+  color: white;
+  padding: 8px 16px;
+  font-size: 14px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 4rem;
+}
+
+.my-tasks-no-tasks {
+  padding: 20px;
+  text-align: center;
+  color: #666;
+}
+
+/* Add these to your existing MyTasks.css */
+
+.my-tasks-assigned-members {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 12px;
+}
+
+.my-tasks-assigned-chunk {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.my-tasks-meta-v2 {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: 4px;
+}
+
+.my-tasks-due-date {
+  /* font-size: 12px;
+  font-weight: 500; */
+  color: #E74C3C;
+}
+
+
+@media (max-width: 1240px) {
+  .my-tasks-page-wrapper-v2 {
+    padding: 20px 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .my-tasks-page-wrapper-v2 {
+    padding: 15px 10px;
+  }
+
+  .my-tasks-controls-wrapper-v2 {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .my-tasks-actions-right-v2 {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .my-tasks-search-input-v2 {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .my-tasks-page-wrapper-v2 {
+    padding: 10px;
+  }
+
+  .my-tasks-filters-wrapper-v2 {
+    flex-wrap: wrap;
+  }
+}

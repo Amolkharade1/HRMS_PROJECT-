@@ -1,0 +1,280 @@
+.dashboard-container {
+  font-family: Arial, sans-serif;
+  color: #333;
+  padding: 0;
+  margin: 0;
+  background: #f3f6fb;
+}
+
+/* .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #1A3E6B;
+  color: #fff;
+  padding: 1rem;
+  margin-bottom: 0.25rem;
+  padding: 0.5rem 0.75rem;
+} */
+
+
+/* .Dashboardlogo {
+  background: none;
+  border: none;
+  padding: 0.5rem 0.75rem;
+  cursor: pointer;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 0.95rem;
+  
+} */
+
+/* 
+
+.nav-links {
+  display: flex;
+  gap: 1rem;
+  flex: 1;
+}
+
+.nav-links span {
+  cursor: pointer;
+}
+
+.nav-icons {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.user-avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: black;
+}
+
+.add_button {
+  background-color: #2196F3;
+  color: white;
+  border: none;
+  padding: 0.2rem 0.7rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.3rem;
+}
+
+.tabs {
+  display: flex;
+  background: #ffffff;
+  padding-left: 1rem;
+  margin-top: 0;
+  padding-top: 0.2rem;
+}
+
+.tab {
+  background: none;
+  border: none;
+  padding: 0.5rem 0.75rem;
+  cursor: pointer;
+  text-decoration: none;
+  color: #102E50;
+  font-size: 0.95rem;
+}
+
+.tab.active {
+  border-bottom: 2px solid #2196F3;
+  font-weight: bold;
+}
+.profile-pic {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+}
+
+.icon-button {
+  width: 20px;
+  height: 20px;
+  padding: 6px;
+  cursor: pointer;
+} */
+
+/*end nav bar */
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  padding: 1rem;
+  align-items: start;
+}
+
+.dashboard-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  min-height: 250px;
+}
+
+.dashboard-profile {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.dashboard-profile img {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+}
+
+
+.dashboard-leave-report ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* .profile-pic {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+} */
+
+.dashboard-favorite {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 0.8rem 0;
+}
+
+.dashboard-favorite img {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+}
+
+.dashboard-favorite-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.phone {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.9rem;
+  color: #444;
+}
+
+.dashboard-phone img {
+  width: 12px;
+  height: 12px;
+  border-radius: 10px;
+}
+
+.dashboard-leave-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+}
+
+.dashboard-leave-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #eee;
+}
+
+.dashboard-leave-count {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #555;
+}
+
+.dashboard-leave-info strong {
+  display: block;
+  font-size: 1rem;
+}
+
+.dashboard-leave-info p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #777;
+}
+
+/* Optional: individual colors for circles */
+.casual .dashboard-leave-count {
+  border-color: #0066ff;
+}
+
+.earned .dashboard-leave-count {
+  border-color: #28a745;
+}
+
+.lwop .dashboard-leave-count {
+  border-color: #ff4444;
+}
+
+.paternity .dashboard-leave-count {
+  border-color: #ff8800;
+}
+
+.sabbatical .dashboard-leave-count {
+  border-color: #f0ad4e;
+}
+
+.sick .dashboard-leave-count {
+  border-color: #6f42c1;
+}
+
+.dashboard-main-content {
+  height: calc(116vh - 111px);
+  /* Adjust if necessary */
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+
+}
+
+.dashboard-scrollable-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1rem;
+
+  /* Optional: Always show scrollbar on supported browsers */
+  scrollbar-width: thin;
+  /* Firefox */
+  scrollbar-color: #888 #f1f1f1;
+  /* Firefox */
+}
+
+/* Chrome, Edge, and Safari */
+.dashboard-scrollable-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.dashboard-scrollable-content::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.scrollable-content::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 4px;
+  border: 2px solid #f1f1f1;
+}
+
+.dashboard-scrollable-content::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+

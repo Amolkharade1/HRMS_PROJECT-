@@ -1,0 +1,241 @@
+.bonafide-page-container {
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.bonafide-main-container {
+  padding: 20px;
+  background-color: #f4f6fa;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.bonafide-action-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.bonafide-search-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 300px;
+}
+
+.bonafide-search-input {
+  padding: 8px 12px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px 0 0 4px;
+  flex-grow: 1;
+  outline: none;
+}
+
+.bonafide-search-button {
+  padding: 8px 12px;
+  background-color: #1877F2;
+  color: white;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+}
+
+.bonafide-search-icon {
+  font-style: normal;
+}
+
+.bonafide-add-record-btn {
+  padding: 8px 16px;
+  background-color: #1877F2;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.bonafide-table-scroll-container {
+  flex: 1;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.bonafide-table-wrapper {
+  min-width: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+
+.bonafide-table-header {
+  display: grid;
+  grid-template-columns: 40px 1fr 1fr 1fr 2fr 120px; /* Changed last column to 120px */
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: #E5E4E2;
+  color: #4b5b6d;
+  font-weight: 500;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.bonafide-table-row {
+  display: grid;
+  grid-template-columns: 40px 1fr 1fr 1fr 2fr 120px; /* Changed last column to 120px */
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.bonafide-table-cell {
+  padding: 12px 15px;
+  font-size: 14px;
+  line-height: 1.4;
+  word-break: break-word;
+  border-right: 1px solid rgba(0, 0, 0, 0.05);
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.bonafide-table-cell:last-child {
+  border-right: none;
+}
+
+.bonafide-checkbox-cell {
+  justify-content: center;
+}
+
+.bonafide-table-body {
+  overflow-y: auto;
+}
+
+.bonafide-no-records-message {
+  font-size: 16px;
+  color: #555;
+  padding: 20px;
+  text-align: center;
+  grid-column: 1 / -1;
+}
+
+.bonafide-actions-cell {
+  justify-content: center;
+  gap: 10px;
+}
+
+.bonafide-delete-btn {
+  padding: 6px 12px;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background-color: white;
+}
+
+/* Scrollbar styling */
+.bonafide-table-scroll-container::-webkit-scrollbar {
+  width: 10px;
+}
+
+.bonafide-table-scroll-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.bonafide-table-scroll-container::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+
+.bonafide-table-scroll-container::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+.bonafide-action-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 0 5px;
+  margin: 0 2px;
+  transition: transform 0.2s;
+}
+
+.bonafide-action-btn:hover {
+  transform: scale(1.2);
+}
+
+.bonafide-table-header .bonafide-table-cell:last-child {
+  justify-content: center;
+}
+
+.bonafide-actions-header {
+  justify-content: center;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .bonafide-action-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .bonafide-search-container {
+    width: 100%;
+    max-width: none;
+  }
+
+  .bonafide-table-header {
+    font-size: 13px;
+  }
+
+  .bonafide-table-cell {
+    font-size: 13px;
+    padding: 10px 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .bonafide-table-header {
+    display: none;
+  }
+
+  .bonafide-table-row {
+    grid-template-columns: 1fr;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 10px;
+  }
+
+  .bonafide-table-cell {
+    border-right: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    padding: 8px 0;
+    width: 100% !important;
+  }
+
+  .bonafide-table-cell:last-child {
+    border-bottom: none;
+  }
+
+  .bonafide-table-cell::before {
+    content: attr(data-label);
+    font-weight: bold;
+    margin-right: 10px;
+    min-width: 120px;
+    display: inline-block;
+  }
+
+  .bonafide-table-cell[data-label=""]::before {
+    content: none;
+  }
+}

@@ -1,0 +1,371 @@
+/* TrackTasks.css */
+body {
+  margin: 0;
+  font-family: 'Lato', 'Segoe UI', sans-serif;
+  font-size: 14px;
+  background-color: #f1f3f6;
+  color: #333;
+}
+
+.track-tasks-wrapper {
+  max-width: 1500px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Loading and Error States */
+.tt-loading, .tt-error, .tt-no-tasks {
+  padding: 20px;
+  text-align: center;
+  font-size: 16px;
+}
+
+.tt-error {
+  color: #d32f2f;
+}
+
+/* Main Container */
+.tt-container {
+  width: 100%;
+}
+
+/* Controls Section */
+.tt-controls-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  margin-bottom: 0;
+}
+
+.tt-filters-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.tt-actions-right {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.tt-search-input {
+  padding: 8px 12px;
+  border: 1px solid #d0d4da;
+  border-radius: 4px;
+  font-size: 14px;
+  width: 200px;
+  /* margin-right: 3rem; */
+
+}
+
+.tt-filter-btn {
+  background-color: #fff;
+  padding: 6px 10px;
+  border: 1px solid #cbd1d6;
+  border-radius: 4px;
+  font-size: 14px;
+  color: #333;
+}
+
+.tt-open-btn {
+  background-color: #edf2ff;
+  color: #333;
+  font-size: 14px;
+  padding: 6px 12px;
+  border: 1px solid #c3d4fa;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.tt-open-count {
+  color: #0088FF;
+}
+
+.tt-completed-count {
+  color: #00b386;
+}
+
+.tt-add-task-button {
+  background-color: #1a73e8;
+  color: white;
+  padding: 8px 16px;
+  font-size: 14px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 4rem;
+}
+
+/* Task List Container */
+.tt-task-list-container {
+  max-height: calc(100vh - 200px); /* Adjust based on your needs */
+  overflow-y: auto;
+  background-color: white;
+  border-radius: 4px;
+  width: 95%;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.05);
+}
+
+/* Task List Section */
+.tt-task-list {
+  width: 100%;
+  min-width: 1000px;
+}
+
+.tt-task-list-scrollable {
+  max-height: calc(100vh - 250px); /* Adjust based on your needs */
+  overflow-y: auto;
+}
+
+.tt-task-header, .tt-task-row {
+  display: grid;
+  grid-template-columns: minmax(300px, 2fr) 120px 120px 80px;
+  gap: 20px;
+  padding: 10px 16px;
+}
+
+.tt-task-header {
+  background-color: #E5E4E2;
+  color: #4b5b6d;
+  opacity: 0.9;
+  font-size: 14px;
+  font-weight: 500;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.tt-task-row {
+  align-items: center;
+  border-bottom: 1px solid #e0e0e0;
+  font-size: 14px;
+}
+
+/* Column Styles */
+.tt-col {
+  display: flex;
+  align-items: center;
+}
+
+.tt-col.tt-details {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  min-width: 0;
+}
+
+.tt-col.tt-status, 
+.tt-col.tt-status-header {
+  justify-content: flex-start;
+}
+
+.tt-col.tt-assigned {
+  justify-content: flex-start;
+}
+
+.tt-col.tt-action-col {
+  justify-content: flex-end;
+}
+
+/* Task Details */
+.tt-checkbox {
+  margin-top: 3px;
+}
+
+.tt-avatar-icon {
+  font-size: 20px;
+  margin-top: 2px;
+}
+
+.tt-task-text {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.tt-task-title {
+  font-weight: 600;
+  font-size: 14px;
+  color: #1a73e8;
+  margin-bottom: 4px;
+}
+
+.tt-task-desc {
+  font-size: 14px;
+  color: #555;
+}
+
+.tt-truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.tt-task-meta {
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+.tt-due-date {
+  color: #e74c3c;
+}
+
+/* Status Badges */
+.tt-status-badge {
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.tt-status-open {
+  background-color: #e3f2fd;
+  color: #1976d2;
+}
+
+.tt-status-completed {
+  background-color: #e8f5e9;
+  color: #388e3c;
+}
+
+/* Assigned To Section */
+.tt-assigned-name {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.tt-unassigned {
+  color: #757575;
+  font-style: italic;
+}
+
+/* Action Menu */
+.tt-action-container {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.tt-action-icon-wrapper {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.tt-action-icon {
+  font-size: 16px;
+  color: #666;
+  transition: opacity 0.2s ease;
+}
+
+.tt-task-row:hover .tt-action-icon {
+  opacity: 1;
+}
+
+.tt-dropdown-menu {
+  position: absolute;
+  top: 24px;
+  right: 0;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  z-index: 10;
+  min-width: 160px;
+  animation: fadeIn 0.2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.tt-dropdown-option {
+  padding: 10px 14px;
+  cursor: pointer;
+  font-size: 14px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.tt-dropdown-option:last-child {
+  border-bottom: none;
+}
+
+.tt-dropdown-option:hover {
+  background-color: #f5f5f5;
+}
+
+.tt-dropdown-status {
+  padding: 8px 14px;
+  cursor: pointer;
+  font-size: 13px;
+  color: #0070f3;
+}
+
+.tt-dropdown-status:hover {
+  background-color: #f0f8ff;
+}
+
+/* Responsive Design */
+@media (max-width: 1240px) {
+  .track-tasks-wrapper {
+    padding: 20px 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .track-tasks-wrapper {
+    padding: 15px 10px;
+  }
+  
+  .tt-task-header, .tt-task-row {
+    grid-template-columns: minmax(200px, 2fr) 100px 100px 60px;
+    gap: 10px;
+  }
+  
+  .tt-search-input {
+    width: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .track-tasks-wrapper {
+    padding: 10px;
+  }
+  
+  .tt-controls-row {
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
+  
+  .tt-task-header, .tt-task-row {
+    grid-template-columns: minmax(150px, 1fr) 80px 80px 50px;
+    gap: 8px;
+    padding: 8px 10px;
+  }
+  
+  .tt-status-badge {
+    padding: 2px 8px;
+    font-size: 11px;
+  }
+  
+  .tt-avatar-icon {
+    font-size: 16px;
+  }
+  
+  .tt-task-title, .tt-task-desc {
+    font-size: 12px;
+  }
+}

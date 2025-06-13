@@ -1,0 +1,331 @@
+/* 1. Root layout container */
+.attendance-page-wrapper {
+  display: fixed;
+  flex-direction: column;
+  /* height: 100vh;
+  width: 100%; */
+  /* overflow: hidden; */
+  font-family: Arial, sans-serif;
+}
+
+/* 2. Scrollable content */
+.attendance-container {
+  flex: 1;
+  overflow-y: auto;
+  background-color: #f3f4f6;
+  padding-bottom: 188px;
+  width: 100%;
+}
+
+/* 3. Date range selector */
+.attendance-date-range-container {
+  background-color: #f1f5f9;
+  margin: 16px auto;
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  border-radius: 4px;
+  max-width: 90rem;
+  width: 90%;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.attendance-date-range {
+  font-size: 16px;
+  font-weight: 500;
+  color: #111827;
+  display: flex;
+  align-items: center;
+}
+.attendance-nav-arrow {
+  background-color: white;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  color: #2196f3;
+  padding: 4px 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.attendance-clickable { cursor: pointer; }
+.attendance-clickable:hover { background-color: #e5e7eb; }
+
+.attendance-calendar-popover {
+  position: absolute;
+  margin-top: 80px;
+  z-index: 10;
+}
+
+/* 4. Controls */
+.attendance-controls {
+  background-color: white;
+  padding: 16px;
+  margin: 4px auto; /* Reduced margin to move the container up */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  max-width: 70rem;
+  width: 90%;
+  
+  /* margin-top: -1.5rem; */
+  gap: 0.5rem; /* Reduced gap between items */
+  flex-wrap: wrap;
+}
+
+.attendance-shift-info { font-size: 14px; }
+.attendance-note-input {
+  border: 1px solid #d1d5db;
+  padding: 8px;
+  border-radius: 4px;
+  font-size: 14px;
+  flex: 1;
+  max-width: 30rem;
+  min-width: 200px;
+  margin-right: 33rem;
+}
+.attendance-checkout-box {
+  background-color: #2196f3;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.attendance-week-records {
+  margin: 16px auto;
+  background-color: white;
+  border-radius: 8px;
+  max-width: 90rem;
+  width: 90%;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  max-height: 500px;
+  overflow-y: auto;
+  /* padding-bottom: 240px; Increase so last row is visible above footer */
+}
+
+
+
+
+.attendance-day-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 13px 44px;
+  border-bottom: 5px solid #e5e7eb;
+
+}
+.attendance-day-label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 120px;
+}
+.attendance-day-circle {
+  width: 22px;
+  height: 22px;
+  background-color: #3b82f6;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+}
+.attendance-dot-track { display: flex; gap: 6px; }
+.attendance-dot {
+  width: 6px;
+  height: 6px;
+  background-color: #10b981;
+  border-radius: 50%;
+}
+.attendance-time-info, .attendance-hours-info {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+/* Footer adjustment */
+.attendance-footer-summary {
+  position: fixed;
+  bottom: 0;
+  left: 156px; /* adjust based on sidebar width */
+  right: 0;
+  background-color: white;
+  padding: 16px;
+  display: flex;
+  gap: 16px;
+  font-size: 14px;
+  flex-wrap: wrap;
+  width: calc(100% - 100px); /* adjust for sidebar */
+  box-shadow: 0 4px 3px rgba(0, 0, 0, 0.05);
+  z-index: 1000;
+  /* border-radius: 4px; */
+  margin-bottom: 0; /* Ensure no extra space is added */
+}
+
+.attendance-footer-summary span { font-weight: bold; }
+.attendance-blue  { color: #2563eb; }
+.attendance-green { color: #16a34a; }
+.attendance-purple{ color: #9333ea; }
+.attendance-yellow{ color: #eab308; }
+.attendance-cyan  { color: #06b6d4; }
+.attendance-gray  { color: #6b7280; }
+
+/* 7. Modal */
+.attendance-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 120vh;
+  background: rgba(0,0,0,0.3);
+  display: flex;
+  justify-content: right;
+  align-items: right;
+}
+
+.attendance-modal-content {
+  display: flex;
+  flex-direction: column;
+  background: #c7c9cc;
+  /* border-radius: 12px; */
+  width: 600px;
+  max-width: 90%;
+  height: 650px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+/* Body inside modal */
+.attendance-modal-body {
+  flex: 1;
+  background-color: #ffffff;
+  /* display: flex; */
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+/* Footer inside modal */
+.attendance-modal-footer {
+  padding: 1rem 1.5rem;
+  background-color: #f9fafb;
+  border-top: 1px solid #e5e7eb;
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  height: 64px;
+  flex-shrink: 0;
+}
+
+.attendance-btn-Add-entry {
+  background-color: #3b82f6;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+ 
+  /* margin-top: 1rem; */
+  /* margin-bottom: 1rem; */
+
+
+}
+
+/* Empty state */
+.attendance-empty-state {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+}
+
+/* Header */
+.attendance-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+  padding: 1.5rem;
+  background-color: #f9fafb;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+/* Close button */
+.attendance-modal-close {
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/* Form layout */
+.attendance-entry-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.attendance-entry-row {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.attendance-entry-group {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  flex: 1;
+  min-width: 200px;
+}
+
+.attendance-entry-group input[type="time"],
+.attendance-entry-group select {
+  padding: 6px 8px;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+textarea {
+  flex: 1;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #d1d5db;
+  font-size: 14px;
+  min-width: 200px;
+  resize: vertical;
+}
+
+.attendance-entry-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+}
+
+.attendance-btn-Add-entry-cancel {
+  background-color: white;
+  color: #111827;
+  padding: 8px 16px;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.attendance-btn-Add-entry-save {
+  background-color: #3b82f6;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}

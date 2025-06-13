@@ -1,0 +1,215 @@
+.experience-page-container {
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.experience-main-container {
+  padding: 20px;
+  background-color: #f4f6fa;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.experience-action-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.experience-search-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 300px;
+}
+
+.experience-search-input {
+  padding: 8px 12px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px 0 0 4px;
+  flex-grow: 1;
+  outline: none;
+}
+
+.experience-search-button {
+  padding: 8px 12px;
+  background-color: #1877F2;
+  color: white;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+}
+
+.experience-search-icon {
+  font-style: normal;
+}
+
+.experience-add-record-btn {
+  padding: 8px 16px;
+  background-color: #1877F2;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.experience-table-scroll-container {
+  flex: 1;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  background-color: white;
+}
+
+.experience-table-wrapper {
+  min-width: 100%;
+  display: grid;
+}
+
+.experience-table-header {
+  display: grid;
+  grid-template-columns: 40px 1fr 1fr 1fr 2fr 120px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: #E5E4E2;
+  color: #4b5b6d;
+  font-size: 14px;
+  font-weight: 500;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.experience-table-row {
+  display: grid;
+  grid-template-columns: 40px 1fr 1fr 1fr 2fr 120px;
+  background-color: white;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.experience-table-cell {
+  padding: 12px 15px;
+  font-size: 14px;
+  line-height: 1.4;
+  word-break: break-word;
+  white-space: normal;
+  border-right: 1px solid rgba(0, 0, 0, 0.08);
+  text-align: left;
+  display: flex;
+  align-items: center;
+}
+
+.experience-table-cell:last-child {
+  border-right: none;
+}
+
+.experience-checkbox-cell {
+  justify-content: center;
+}
+
+.experience-actions-cell {
+  justify-content: center;
+  gap: 10px;
+}
+
+.experience-no-records-message {
+  font-size: 16px;
+  color: #555;
+  padding: 20px;
+  text-align: center;
+  grid-column: 1 / -1;
+}
+
+.experience-delete-btn {
+  padding: 6px 12px;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background-color: white;
+}
+
+/* Scrollbar styling */
+.experience-table-scroll-container::-webkit-scrollbar {
+  width: 10px;
+}
+
+.experience-table-scroll-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.experience-table-scroll-container::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+
+.experience-table-scroll-container::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .experience-action-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .experience-search-container {
+    width: 100%;
+    max-width: none;
+  }
+
+  .experience-table-header {
+    font-size: 13px;
+  }
+
+  .experience-table-cell {
+    font-size: 13px;
+    padding: 10px 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .experience-table-header {
+    display: none;
+  }
+
+  .experience-table-row {
+    grid-template-columns: 1fr;
+    padding: 10px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .experience-table-cell {
+    border-right: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    padding: 8px 0;
+  }
+
+  .experience-table-cell:last-child {
+    border-bottom: none;
+  }
+
+  .experience-table-cell::before {
+    content: attr(data-label);
+    font-weight: bold;
+    margin-right: 10px;
+    min-width: 120px;
+    display: inline-block;
+  }
+
+  .experience-actions-cell {
+    justify-content: flex-start;
+  }
+}

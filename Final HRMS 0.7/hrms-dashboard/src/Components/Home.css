@@ -1,0 +1,812 @@
+html,
+body {
+  /* height: 100vh; */
+  margin: 0;
+  overflow: hidden;
+}
+
+.home-container {
+  display: flex;
+  flex-wrap: wrap;
+  font-family: Arial, sans-serif;
+  overflow: hidden;
+}
+
+
+
+.Home-header-image {
+  width: 100%;
+  height: 150px;
+  background-size: cover;
+  background-position: center;
+}
+
+.home-top-right-button {
+  position: absolute;
+  top: 120px;
+  right: 20px;
+  padding: 8px;
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  border: none;
+  align-items: center;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.home-top-right-button:hover {
+  background-color: #f8fcff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border: 1px solid #7371ff;
+}
+
+.home-modal-overlay {
+  position: absolute;
+  top: 0;
+  right: 100px;
+  width: 280px;
+  height: auto;
+  /* background: rgba(0, 0, 0, 0.3); */
+  display: flex;
+  align-items: right;
+  /* padding-right: 50rem; */
+  /* justify-content: flex-start; */
+  z-index: 100;
+}
+
+.home-menu-modal {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+  width: 200px;
+
+  position: absolute;
+  top: 50px;
+  left: 8rem;
+
+  top: 9rem;
+  z-index: 999;
+}
+
+
+/* .modal-title {
+  margin-top: 0;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+} */
+
+.home-modal-options {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.home-modal-options li {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.home-modal-options li:hover {
+  background-color: #f0f0f0;
+}
+
+.home-close-button {
+  position: absolute;
+  top: 8px;
+  right: 24px;
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.Home-profile-card {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  width: 250px;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin: -40px 20px auto 15px;
+
+}
+
+.Home-profile-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+  object-fit: cover;
+  margin: -70px auto 15px auto;
+}
+
+.home-user-id {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.home-user-name {
+  font-weight: bold;
+}
+
+.home-user-role {
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.home-time-display {
+  font-size: 20px;
+  margin: 10px 0;
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+
+.home-time-part {
+  background: #f0f0f0;
+  padding: 5px 8px;
+  border-radius: 5px;
+}
+
+.home-time-separator {
+  padding: 5px 0;
+}
+
+.home-check-in-button {
+  background-color: white;
+  color: rgb(0, 0, 0);
+  border: 1px solid #2196f3;
+  padding: 8px 30px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.home-main-panel {
+  flex: 1;
+  min-width: 300px;
+  max-height: calc(100vh - 150px);
+  /* overflow-y: auto; */
+}
+
+/* Acctive links */
+.home-nav-tabs {
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: white;
+  border-radius: 8px;
+  z-index: 99999;
+  padding: 20px;
+  /* margin: -40px 20px 10px auto; */
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+.home-tab-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  flex: 1;
+}
+
+.home-tab {
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #111;
+}
+
+.home-tab svg {
+  font-size: 16px;
+}
+
+.home-tab.active {
+  border-bottom: 2px solid #007bff;
+  font-weight: 600;
+  color: #007bff;
+  /* max-height: max-content; */
+}
+
+.home-settings-icon {
+  margin-left: auto;
+  padding-left: 10px;
+}
+
+.demo-banner {
+  background: #a061f6;
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  margin: 20px 20px 10px auto;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.demo-text {
+  max-width: 70%;
+}
+
+.demo-title {
+  margin: 0;
+  font-size: 20px;
+}
+
+.demo-subtitle {
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.request-demo-btn {
+  background-color: #ff3d00;
+  border: none;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.home-morning-greeting {
+  display: flex;
+  align-items: center;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  flex-wrap: wrap;
+  margin: 20px 20px 10px auto;
+}
+
+.hrms-logo {
+  width: 40px;
+  height: 40px;
+  margin-right: 15px;
+}
+
+.home-greeting-text {
+  flex: 2;
+}
+
+.home-good-morning {
+  margin: 0;
+  font-size: 15px;
+}
+
+.home-greeting-name {
+  /* font-weight: bold; */
+  font-weight: lighter;
+  font-size: 14px;
+}
+
+.home-day-wish {
+  margin: 5px 0 0;
+  font-size: 14px;
+  color: #666;
+}
+
+/* ******scrolling********** */
+.home-scrollable-section {
+  max-height: 497px;
+  overflow-y: scroll;
+  scrollbar-width: thin;
+  scrollbar-color: #989898 #f1f1f1;
+}
+
+.home-scrollable-section::-webkit-scrollbar {
+  width: 8px;
+}
+
+.home-scrollable-section::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 10px;
+}
+
+.home-scrollable-section::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+
+/* work-schedule */
+.home-check-in-reminder {
+  display: flex;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  align-items: center;
+  margin: 20px 20px 10px auto;
+}
+
+.home-check-in-icon {
+  font-size: 30px;
+  margin-right: 15px;
+}
+
+home-.check-in-content p {
+  margin: 3px 0;
+}
+
+.home-reminder-text {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.home-reminder-detail,
+.home-reminder-time {
+  font-size: 14px;
+  color: #555;
+}
+
+
+/* work style */
+.home-work-schedule-extended {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin: 20px 20px 10px auto;
+  margin-bottom: 10rem;
+}
+
+.home-work-schedule-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.home-schedule-icon {
+  width: 36px;
+  height: 36px;
+}
+
+.home-section-title.home-colored-title {
+  color: #3f51b5;
+  margin: 0;
+}
+
+.home-schedule-dates {
+  font-size: 14px;
+  color: #444;
+  margin-top: 2px;
+}
+
+.home-shift-box {
+  background: #f7f7f7;
+  padding: 10px 15px;
+  margin: 15px 0;
+  border-radius: 6px;
+  font-size: 14px;
+  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.03);
+}
+
+.home-shift-time {
+  color: #666;
+}
+
+.home-week-timeline {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  border-top: 1px solid #e0e0e0;
+  padding-top: 10px;
+}
+
+.home-time-display {
+  font-size: 16px;
+  margin: 10px 0;
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+
+.home-day-status {
+  text-align: center;
+  flex: 1;
+}
+
+.home-day-label {
+  display: block;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 2px;
+}
+
+.home-day-date {
+  display: inline-block;
+  font-weight: 600;
+  padding: 4px 6px;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.home-highlight-date {
+  background-color: #007bff;
+  color: white;
+}
+
+.home-status-label {
+  font-size: 12px;
+  margin-top: 4px;
+  display: block;
+}
+
+/* Specific Status Styles */
+.status-label.absent {
+  color: #e53935;
+}
+
+.status-label.weekend {
+  color: #fb8c00;
+}
+
+.status-label.today {
+  font-weight: bold;
+}
+
+/* reportees */
+.home-reportees-card {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  width: 250px;
+  height: 230px;
+  text-align: left;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin: 20px 20px auto 15px;
+
+}
+
+.home-reportee-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-height: 180px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #989898 #f1f1f1;
+}
+
+.home-reportee-list li {
+  display: flex;
+  align-items: left;
+  margin: 10px;
+  padding: 0px 0px 0px 0px !important;
+  font-size: 14px;
+  color: #333;
+}
+
+.home-reportee-list li:hover {
+  background-color: #f5f5f5;
+  border-radius: 8px;
+}
+
+.home-reportee-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 10%;
+  margin-right: 10px;
+  object-fit: cover;
+}
+
+
+/* Dropdown */
+.more-dropdown {
+  position: absolute;
+  top: calc(100% + 10px);
+  /* places it below the nav */
+  right: 20px;
+  width: 200px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  padding: 10px 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.dropdown-item {
+  padding: 10px 15px;
+  font-size: 14px;
+  color: #333;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.dropdown-item:hover {
+  background-color: #6a2424;
+}
+
+.Home-navdiv {
+  position: relative;
+}
+
+.home-settings-dropdown {
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 200px;
+    height: 390px;
+    z-index: 999;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-height: 450px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #989898 #F1F1F1;
+      }
+  .home-settings-dropdown .home-dropdown-item {
+    padding: 10px 15px;
+    cursor: pointer;
+  }
+  .home-settings-dropdown .home-dropdown-item:hover {
+    background-color: #F0F0F0;
+  }
+  .homeswitch-disabled{
+    position: relative;
+    display: inline-block;
+    right: 10px;
+    font-size: 20px;
+    float: right; /* Align to right side */
+  }
+  /* Toggle switch container */
+.home-switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 22px;
+  float: right; /* Align to right side */
+}
+.home-switch-disabled{
+  position: relative;
+  display: inline-block;
+  right: 10px;
+  font-size: 20px;
+  float: right; /* Align to right side */
+}
+/* Hide default checkbox */
+.home-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+/* The slider */
+.home-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 22px;
+}
+.home-slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+/* Toggle ON */
+input:checked + .home-slider {
+  background-color: #4CAF50;
+}
+input:checked + .home-slider:before {
+  transform: translateX(18px);
+}
+
+.logout-item {
+  color: red;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.logout-item:hover {
+  color: darkred;
+}
+
+
+
+
+
+
+
+
+
+
+.home-current-day {
+  font-size: 14px;
+  margin-top: 4px;
+  font-weight: 500;
+}
+
+.home-current-day.red {
+  color: red;
+}
+
+.home-current-day.normal {
+  color: #555;
+}
+
+@media screen and (max-width: 1024px) {
+  .home-container {
+    flex-direction: column;
+    /* padding: 0 15px; */
+  }
+
+  .left-panel {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .Home-profile-card,
+  .reportees-card {
+    width: 90%;
+    margin: 15px auto;
+  }
+
+  .main-panel {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .nav-tabs,
+  .demo-banner,
+  .morning-greeting,
+  .check-in-reminder,
+  .work-schedule-extended {
+    width: 90%;
+    margin: 15px auto;
+    padding: 15px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .Home-header-image {
+    height: 120px;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .Home-profile-image {
+    width: 100px;
+    height: 100px;
+    /* margin-top: -40px; */
+  }
+
+  .top-right-button {
+    top: 115px;
+    right: 10px;
+    font-size: 12px;
+    padding: 6px 8px;
+  }
+
+  .user-id,
+  .user-name {
+    font-size: 16px;
+  }
+
+  .user-role,
+  .demo-subtitle,
+  .day-wish,
+  .reminder-detail,
+  .reminder-time {
+    font-size: 13px;
+  }
+
+  .time-display {
+    font-size: 16px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .check-in-button {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+
+  .tab {
+    font-size: 14px;
+  }
+
+  .demo-title,
+  .good-morning {
+    font-size: 16px;
+  }
+
+  .hrms-logo,
+  .check-in-icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .more-dropdown {
+    max-width: 150px;
+    width: 100%;
+    right: 10px;
+    justify-content: end;
+    align-items: end;
+  }
+
+  .dropdown-item {
+    font-size: 13px;
+    padding: 10px 12px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .Home-header-image {
+    height: 120px;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .top-right-button {
+    top: 115px;
+    right: 8px;
+    font-size: 11px;
+    padding: 6px 7px;
+  }
+
+  .Home-profile-card,
+  .reportees-card,
+  .nav-tabs,
+  .demo-banner,
+  .morning-greeting,
+  .check-in-reminder,
+  .work-schedule-extended {
+    padding: 10px;
+    width: auto;
+    margin: 10px 10px 0px 10px;
+  }
+
+  .tab {
+    font-size: 12px;
+  }
+
+  .time-display {
+    font-size: 14px;
+  }
+
+  .more-dropdown {
+    max-width: 150px;
+    width: 100%;
+    right: 10px;
+    justify-content: end;
+    align-items: end;
+
+  }
+
+  .dropdown-item {
+    font-size: 12px;
+  }
+
+  .home-settings-dropdown {
+    max-width: 150px;
+    width: 100%;
+    right: 10px;
+    justify-content: end;
+    align-items: end;
+    min-height: 200px;
+    max-height: 300px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #989898 #f1f1f1;
+  }
+}

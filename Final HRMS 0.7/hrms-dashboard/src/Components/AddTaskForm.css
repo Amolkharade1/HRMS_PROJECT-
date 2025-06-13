@@ -1,0 +1,239 @@
+.ds-task-form-container {
+  width: 100%;
+  height: 100vh;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8fafc;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.ds-task-form-header {
+  margin-bottom: 20px;
+  max-width: 1400px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  flex-shrink: 0;
+}
+
+.ds-task-form-title {
+  font-size: 28px;
+  color: #2c3e50;
+  font-weight: 600;
+  margin: 0;
+}
+
+.ds-task-form-box {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 30px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+.ds-task-form-section-title {
+  font-size: 18px;
+  color: #3498db;
+  margin-bottom: 25px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ecf0f1;
+}
+
+.ds-task-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.ds-form-row {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 15px;
+}
+
+.ds-form-label {
+  width: 200px;
+  padding-top: 12px;
+  font-weight: 500;
+  color: #34495e;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+.ds-form-input-container {
+  flex: 1;
+  min-width: 0;
+}
+
+.ds-form-input {
+  width: 100%;
+  max-width: 1000px;
+  padding: 12px 15px;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  background-color: #f8f9fa;
+}
+
+.ds-form-input:focus {
+  outline: none;
+  border-color: #3498db;
+  background-color: #fff;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+}
+
+.ds-form-textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.ds-form-select {
+  width: 100%;
+  max-width: 1000px;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 15px center;
+  background-size: 16px;
+  padding-right: 40px;
+}
+
+.ds-required-marker {
+  color: #e74c3c;
+  margin-left: 4px;
+}
+
+.ds-form-actions {
+  display: flex;
+  gap: 15px;
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #ecf0f1;
+}
+
+.ds-btn {
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 120px;
+}
+
+.ds-btn-primary {
+  background-color: #3498db;
+  color: white;
+  border: 1px solid #2980b9;
+}
+
+.ds-btn-primary:hover {
+  background-color: #2980b9;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 8px rgba(41, 128, 185, 0.3);
+}
+
+.ds-btn-secondary {
+  background-color: #3498db;
+  color: white;
+  border: 1px solid #2980b9;
+}
+
+.ds-btn-secondary:hover {
+  background-color: #2980b9;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 8px rgba(46, 204, 113, 0.3);
+}
+
+.ds-btn-outline {
+  background-color: transparent;
+  color: #7f8c8d;
+  border: 1px solid #bdc3c7;
+}
+
+.ds-btn-outline:hover {
+  background-color: #f8f9fa;
+  color: #34495e;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 8px rgba(189, 195, 199, 0.2);
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .ds-task-form-container {
+    padding: 15px;
+    height: auto;
+    min-height: 100vh;
+  }
+  
+  .ds-task-form-box {
+    padding: 20px;
+    height: auto;
+    overflow: visible;
+  }
+  
+  .ds-form-row {
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 20px;
+  }
+  
+  .ds-form-label {
+    width: 100%;
+    padding-top: 0;
+  }
+  
+  .ds-form-input,
+  .ds-form-select {
+    max-width: 100%;
+  }
+  
+  .ds-form-actions {
+    flex-wrap: wrap;
+  }
+  
+  .ds-btn {
+    flex: 1 0 100%;
+    margin-bottom: 10px;
+  }
+  
+  .ds-btn:last-child {
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: 1600px) {
+  .ds-task-form-box {
+    padding: 40px;
+  }
+  
+  .ds-form-label {
+    width: 250px;
+    font-size: 15px;
+  }
+  
+  .ds-form-input {
+    padding: 14px 18px;
+    font-size: 15px;
+    max-width: 700px;
+  }
+  
+  .ds-form-select {
+    max-width: 730px;
+  }
+  
+  .ds-btn {
+    padding: 14px 28px;
+    font-size: 15px;
+  }
+}

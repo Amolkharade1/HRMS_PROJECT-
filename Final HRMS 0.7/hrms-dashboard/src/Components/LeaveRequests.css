@@ -1,0 +1,246 @@
+.leave-main-container {
+  background-color: #fff;
+  padding: 20px;
+  font-family: 'Inter', sans-serif;
+  color: #2B2B2B;
+  margin-bottom: 1rem;
+}
+
+.leave-header-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.leave-input-search {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  max-width: 300px;
+  background-color: white;
+}
+
+.leave-btn-add {
+  background-color: #2196F3;
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.leave-btn-add:hover {
+  background-color: #1d4ed8;
+}
+
+.leave-table-area {
+  margin-top: 0rem;
+  padding: 1rem;
+  background: white;
+  border-radius: 10px;
+    /* border: 1px solid #ddd; */
+    
+}
+
+.leave-section-title {
+  font-weight: 600;
+  font-size: 18px;
+  margin-bottom: 16px;
+  color: #374151;
+}
+
+.leave-table-container {
+  width: 100%;
+  overflow-x: auto;
+  max-height: 390px;
+  overflow-y: auto;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+}
+
+.leave-data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+
+}
+
+.leave-data-table th {
+  background-color: #E5E4E2;
+  color: #4b5b6d;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 12px;
+  text-align: left;
+  /* border: 1px solid #e5e7eb; */
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.leave-data-table td {
+  padding: 12px;
+  color: black;
+  font-size: 13px;
+  border: 1px solid #e5e7eb;
+}
+
+.leave-record-count {
+  margin-top: 16px;
+  font-weight: 500;
+  color: #374151;
+  font-size: 14px;
+}
+
+.leave-action-column {
+  position: relative;
+  width: 50px;
+  text-align: center;
+}
+
+.leave-action-icon-wrapper {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: background-color 0.2s;
+}
+
+.leave-action-icon-wrapper:hover {
+  background-color: #f3f4f6;
+}
+
+.leave-action-icon {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.status-badge {
+  padding: 5px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+  display: inline-block;
+  border: 1px solid currentColor;
+}
+
+.floating-action-dropdown {
+  position: absolute;
+  background: white;
+  border: 1px solid #ccc;
+  width: 150px;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  padding: 10px 0;
+}
+
+.action-option {
+  padding: 10px 15px;
+  font-size: 14px;
+  color: #333;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.action-option:hover {
+  background-color: #f3f4f6;
+}
+
+.delete-option {
+  color: #ef4444;
+}
+
+.floating-edit-status-options {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  position: absolute;
+  right: 160px;
+  top: 0;
+  width: 150px;
+  z-index: 10;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  border-radius: 4px;
+  padding: 10px 0;
+}
+
+.status-option {
+  padding: 8px 15px;
+  cursor: pointer;
+  transition: background 0.2s;
+  font-size: 13px;
+}
+
+.status-option:hover {
+  background-color: #f0f0f0;
+}
+
+.leave-status-message {
+  padding: 20px;
+  font-size: 15px;
+  text-align: center;
+  color: #666;
+}
+
+/* Responsive styles */
+@media (max-width: 1024px) {
+  .leave-table-container {
+    max-height: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .leave-header-controls {
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
+
+  .leave-input-search {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .leave-btn-add {
+    width: 100%;
+  }
+
+  .leave-table-area {
+    padding: 15px;
+  }
+
+  .floating-action-dropdown {
+    right: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .leave-main-container {
+    padding: 15px;
+  }
+
+  .leave-section-title {
+    font-size: 16px;
+  }
+
+  .leave-data-table th,
+  .leave-data-table td {
+    padding: 8px;
+    font-size: 12px;
+  }
+
+  .floating-action-dropdown {
+    width: 120px;
+  }
+
+  .floating-edit-status-options {
+    width: 120px;
+    right: 130px;
+  }
+}

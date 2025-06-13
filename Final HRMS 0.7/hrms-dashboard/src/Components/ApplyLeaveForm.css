@@ -1,0 +1,229 @@
+.applyleave-container {
+    padding: 20px;
+    background-color: #f5f7fa;
+    min-height: 100vh;
+  }
+  
+  .applyleave-header {
+    margin-bottom: 20px;
+  }
+  
+  .applyleave-form-box {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  }
+  
+  .applyleave-form-group {
+    margin-bottom: 20px;
+  }
+  
+  .applyleave-form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+  }
+  
+  .applyleave-required {
+    color: red;
+  }
+  
+  .applyleave-form-group {
+  margin-bottom: 16px;
+}
+
+.applyleave-input, .applyleave-textarea {
+  width: 100%;
+  padding: 8px;
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+.applyleave-textarea {
+  height: 80px;
+  resize: vertical;
+}
+
+.applyleave-date-group {
+  display: flex;
+  gap: 10px;
+}
+
+.applyleave-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.applyleave-submit-btn, .applyleave-cancel-btn {
+  padding: 10px 20px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+  .applyleave-input {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .applyleave-date-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .applyleave-calendar-btn {
+    padding: 6px 12px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .applyleave-textarea {
+    width: 100%;
+    height: 80px;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: none;
+  }
+  
+  .applyleave-actions {
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  .applyleave-submit-btn {
+    padding: 8px 16px;
+    background-color: #2196F3;
+    border: none;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .applyleave-cancel-btn {
+    padding: 8px 16px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  /* Media Queries for Responsiveness */
+  
+  @media (max-width: 1024px) {
+    .applyleave-form-box {
+      padding: 15px;
+    }
+  
+    .applyleave-form-group {
+      margin-bottom: 15px;
+    }
+  
+    .applyleave-input,
+    .applyleave-textarea {
+      padding: 10px;
+    }
+  
+    .applyleave-date-group {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .applyleave-actions {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .applyleave-submit-btn,
+    .applyleave-cancel-btn {
+      width: 100%;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .applyleave-container {
+      padding: 15px;
+    }
+  
+    .applyleave-form-box {
+      padding: 10px;
+    }
+  
+    .applyleave-form-group {
+      margin-bottom: 12px;
+    }
+  
+    .applyleave-header {
+      margin-bottom: 15px;
+    }
+  
+    .applyleave-input,
+    .applyleave-textarea {
+      padding: 10px;
+      font-size: 14px;
+    }
+  
+    .applyleave-actions {
+      flex-direction: column;
+      gap: 12px;
+      margin-top: 15px;
+    }
+  
+    .applyleave-submit-btn,
+    .applyleave-cancel-btn {
+      width: 100%;
+      padding: 12px;
+      font-size: 14px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .applyleave-container {
+      padding: 10px;
+    }
+  
+    .applyleave-form-box {
+      padding: 8px;
+    }
+  
+    .applyleave-form-group {
+      margin-bottom: 10px;
+    }
+  
+    .applyleave-header {
+      margin-bottom: 10px;
+    }
+  
+    .applyleave-input,
+    .applyleave-textarea {
+      padding: 8px;
+      font-size: 13px;
+    }
+  
+    .applyleave-date-group {
+      flex-direction: column;
+      gap: 8px;
+    }
+  
+    .applyleave-actions {
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 12px;
+    }
+  
+    .applyleave-submit-btn,
+    .applyleave-cancel-btn {
+      width: 100%;
+      padding: 14px;
+      font-size: 15px;
+    }
+  }
+  

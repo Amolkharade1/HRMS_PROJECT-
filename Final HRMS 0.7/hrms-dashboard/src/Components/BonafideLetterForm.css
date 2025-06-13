@@ -1,0 +1,192 @@
+.bl-container {
+  font-family: "Segoe UI", sans-serif;
+  background: #f4f6f9;
+  padding: 20px;
+  position: relative;
+  min-height: 80vh;
+  padding-bottom: 80px; /* Space for sticky footer */
+}
+
+.bl-header h2 {
+  margin: 10px 0 20px;
+  font-size: 20px;
+  font-weight: 500;
+  color: #333;
+}
+
+.bl-form-box {
+  background: #fff;
+  border-radius: 6px;
+  padding: 20px;
+  border: 1px solid #e0e0e0;
+  margin-bottom: 20px;
+}
+
+.bl-section-title {
+  font-size: 16px;
+  margin-bottom: 20px;
+  font-weight: 500;
+  color: #333;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+.bl-form-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  gap: 20px;
+}
+
+.bl-form-group {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 250px;
+}
+
+.bl-form-group label {
+  font-size: 14px;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+.bl-input-field {
+  padding: 8px 12px;
+  border: 1px solid #dcdcdc;
+  border-radius: 4px;
+  font-size: 14px;
+  height: 36px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.bl-form-group.bl-disabled label {
+  color: #999;
+  font-style: italic;
+}
+
+.bl-form-group.bl-disabled span {
+  padding: 8px 0;
+  font-size: 14px;
+  color: #666;
+}
+
+.bl-readonly-field {
+  padding: 8px 12px;
+  font-size: 14px;
+  height: 36px;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  color: #666;
+}
+
+.bl-required {
+  color: red;
+  margin-left: 2px;
+}
+
+.bl-form-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.bl-form-actions.bl-sticky-footer {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  position: fixed;
+  bottom: 0;
+  left: 156px;
+  right: 0;
+  background: #fff;
+  padding: 15px 20px;
+  border-top: 1px solid #e0e0e0;
+  z-index: 100;
+  box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+}
+
+.bl-btn {
+  padding: 8px 16px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  min-width: 120px;
+  
+  text-align: center;
+}
+
+.bl-btn.bl-blue {
+  background-color: #007bff;
+  color: white;
+}
+
+.bl-btn.bl-blue:hover {
+  background-color: #0069d9;
+}
+
+.bl-btn.bl-gray {
+  background-color: #f1f1f1;
+  color: #333;
+}
+
+.bl-btn.bl-gray:hover {
+  background-color: #e0e0e0;
+}
+.bl-error {
+  color: red;
+  font-size: 12px;
+  margin-top: 4px;
+  display: block;
+}
+.bl-error::before {
+  content: "⚠️ ";
+  margin-right: 4px;
+}
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .bl-form-row {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .bl-form-group {
+    min-width: 100%;
+  }
+  
+  .bl-form-actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .bl-btn {
+    width: 100%;
+  }
+  
+  .bl-container {
+    padding: 15px;
+    padding-bottom: 180px; /* More space for stacked buttons */
+  }
+}
+
+@media (max-width: 480px) {
+  .bl-header h2 {
+    font-size: 18px;
+  }
+  
+  .bl-section-title {
+    font-size: 15px;
+  }
+  
+  .bl-input-field, .bl-readonly-field {
+    font-size: 13px;
+  }
+  
+  .bl-form-actions.bl-sticky-footer {
+    padding: 10px 15px;
+  }
+}

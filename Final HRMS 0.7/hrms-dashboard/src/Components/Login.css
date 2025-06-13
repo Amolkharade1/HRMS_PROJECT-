@@ -1,0 +1,362 @@
+/* Login.css */
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f6f9;
+  margin: 0;
+  padding: 0;
+}
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  /* padding: 20px; */
+  background: #f0f2f5;
+  width: 100%;
+}
+
+.login-form {
+  background-color: #fff;
+  padding: 40px 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 400px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.login-form img.logo {
+  width: 80px;
+  /* margin-bottom: 20px; */
+}
+
+.login-form h2 {
+  margin: 0;
+  color: #002EAD;
+  font-size: 24px;
+}
+
+.login-form p {
+  font-size: 14px;
+  color: #002EAD;
+  margin-bottom: 20px;
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+.password-wrapper {
+  position: relative;
+}
+
+.toggle-password {
+  position: absolute;
+  top: 20px;
+  right: 12px;
+  cursor: pointer;
+}
+
+.options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  margin-top: 8px;
+}
+
+.options .remember input {
+  margin-right: 5px;
+}
+
+.options a {
+  color: #002EAD;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.login-form button[type="submit"] {
+  background-color: #002e62;
+  color: white;
+  border: none;
+  padding: 12px;
+  width: 100%;
+  border-radius: 8px;
+  font-size: 16px;
+  margin-top: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-form button[type="submit"]:hover {
+  background-color: #001f4a;
+}
+
+.divider {
+  margin: 20px 0;
+  color: #aaa;
+  position: relative;
+}
+
+.divider::before,
+.divider::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 40%;
+  height: 1px;
+  background: #ddd;
+}
+
+.divider::before {
+  left: 0;
+}
+
+.divider::after {
+  right: 0;
+}
+
+.social-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  gap: 10px;
+}
+
+.social-buttons button {
+  flex: 1;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background: #fff;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-buttons .google:hover {
+  background-color: #f8f8f8;
+}
+
+.social-buttons .microsoft:hover {
+  background-color: #f3f3f3;
+}
+
+.social-buttons img {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+}
+
+.signup {
+  margin-top: 16px;
+  font-size: 14px;
+}
+
+.signup a {
+  color: #002EAD;
+  font-weight: bold;
+  text-decoration: none;
+}
+.reset-password-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 30px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border-radius: 8px;
+  z-index: 1000;
+  width: 300px;
+  text-align: center;
+}
+
+.reset-password-popup input {
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.reset-password-popup button {
+  margin-top: 10px;
+  padding: 10px 15px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.error-message {
+  color: #ff3860;
+  background-color: #fff5f5;
+  padding: 0.75rem 1.25rem;
+  margin-bottom: 1rem;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+.error {
+  border-color: #ff3860 !important;
+}
+
+.error-text {
+  color: #ff3860;
+  font-size: 0.8rem;
+  margin-top: 0.25rem;
+  display: block;
+  text-align: left;
+  width: 100%;
+}
+
+button[disabled] {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+/* Modal Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  width: 100%;
+  height: auto;
+  max-width: 400px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.close-button {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #666;
+}
+
+.modal-content h2 {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.success-message {
+  text-align: center;
+  color: #00C851;
+}
+
+.success-message p {
+  margin-bottom: 1.5rem;
+}
+
+.success-button {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #4285f4;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.success-button:hover {
+  background-color: #3367d6;
+}
+
+/* Error styles for modal */
+.modal-content .error {
+  border-color: #ff4444;
+}
+
+.modal-content .error-text {
+  color: #ff4444;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+  display: block;
+}
+
+.modal-content .error-message {
+  color: #ff4444;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+/* Form group styles for modal */
+.modal-content .form-group {
+  margin-bottom: 1rem;
+}
+
+.modal-content .form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.modal-content .form-group input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.modal-content button[type="submit"] {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #4285f4;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.modal-content button[type="submit"]:hover {
+  background-color: #3367d6;
+}
+
+.modal-content button[disabled] {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+.auto-filled {
+  background-color: #f8f8f8;
+  border-left: 3px solid #4CAF50;
+  transition: all 0.3s ease;
+}
