@@ -8,6 +8,8 @@ import Attendance from './Components/Attendance';
 import AttendanceNavbar from './pages/AttendanceNavbar';
 import Homepage from './Components/Home';
 import MoreFile from './Components/FileSavePage';
+import axios from "./axios"; // yeh tu likhega
+
 
 import ProfileSettingsPage from './Components/ProfileSettingsPage';
 import ProfileEditablePage from './Components/ProfileEditablePage';
