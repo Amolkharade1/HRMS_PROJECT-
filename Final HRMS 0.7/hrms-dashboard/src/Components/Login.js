@@ -2,7 +2,8 @@
 
 
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import axios from "./axios"; // yeh tu likhega
+
 import './Login.css';
 import logo from '../assets/HRMS.jpg';
 import { useNavigate } from 'react-router-dom';
